@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <img src="./img/favicon-32x32.png" alt="">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./grid.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./responsible.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div id="nav" class="navbar">
+        <div class="navbar-wrapper">
+            <a onclick="PageHome()" href="#" class="logo">
+                <img src="./img/logo.png" alt="">
+            </a>
+    
+            <div class="navbar-menu mobile-menu">
+                <i class='bx bx-x mobile-close-icon'></i>
+                <li onclick="PageHome()" id="choosehome" class="navbar-menu-item"><a class = 'active' href="#">Trang chủ</a></li>
+                <li id="chooseintroduce"  class="navbar-menu-item"><a href="#">Giới thiệu</a></li>
+                <li class="navbar-menu-item"><a href="#">Sản phẩm <i class='bx bxs-down-arrow navbar-menu-icon'></i></a>
+                    <ul class="navbar-sub-menu">
+                        <li onclick = 'TopSale()' class="navbar-sub-menu-item"><a href="#">Bán chạy</a></li>
+                        <li onclick = 'Male()'  class="navbar-sub-menu-item"><a href="#">Đồng hồ nam</a></li>
+                        <li onclick = 'Female()' class="navbar-sub-menu-item"><a href="#">Đồng hồ nữ</a></li>
+                        <li onclick = 'Subarchitecture()'  class="navbar-sub-menu-item"><a href="#">Phụ kiện</a></li>
+                    </ul>    
+                </li>
+                <li onclick="PageSearch()" id="chooseinfo" class="navbar-menu-item"><a href="#">Tin tức</a></li>
+                <li onclick="PageContact()" id="choosecontact" class="navbar-menu-item"><a href="#">Liên hệ</a></li>
+            </div>
+    
+            <div class="navbar-icon">
+                 <li class="navbar-icon-item"><input class="navbar-search-input" placeholder="Nhập thông tin tìm kiếm" href=""><i class='bx bx-search-alt search-icon'></i></input></a></li>
+                 <li class="navbar-icon-item login"><a href="#"><i class='bx bx-user'></i></a></li>
+                 <li onclick="" class="navbar-icon-item opencart"><a href="#"><i class='bx bx-shopping-bag bx-tada ' ></i></a>
+                    <spanc class="cart-info" >0</spanc>
+                </li>   
+               
+                <li class="navbar-icon-item openmobile"><a href="#"><i class='bx bx-menu-alt-right menu-icon'></i></a></li>   
+                <h5 onclick = 'PageCheckOut()'  class="account navbar-icon-item">Chào bạn: <span></span></h5>
+                <a onclick = 'Logout()' class="out-account" href="#"><i class='bx bx-log-out bx-rotate-180  navbar-icon-item ' ></i></a> 
+                <a href="./ADMINFINAL/admin.html" class="navbar-icon-item admin"><i class='bx bx-wrench'></i></a>
+            </div>
+             
+            
+        </div>
+        <div class="modal"></div>
+    </div>
+
+    <div id="hero-section" class="hero-section">
+        
+             <div class="bgimg slide-item fade" style="background-image: url(./img/1a\(32\).jpg)">
+                 <div class="caption">
+                     <h2 class="top-down delay-2">
+                        ĐỒNG HỒ ROLEX
+                        
+                     </h2>
+
+                     <p class="top-down delay-4">
+                        Đồng hồ đeo tay là một kiệt tác của những nhà thiết kế vĩ đại, họ đã chế tác ra những chiếc đồng hồ không chỉ để đếm giờ một cách chính xác mà còn mang lại niềm tự hào cho những ai sở hữu nó.
+                     </p>
+
+                     <a href="#best-sale" class="btn top-down delay-6 ">
+                         MUA NGAY
+                     </a>
+                 </div>
+
+             </div>
+ 
+             
+             <div class="bgimg slide-item fade" style="background-image: url(./img/dong-ho-thoi-trang-rolex-banner.jpg)">
+                <div class="caption">
+                    <h2>
+                        ĐỒNG HỒ ROLEX
+                    </h2>
+
+                    <p>
+                        Câu chuyện của Rolex bắt đầu khi nhà sáng lập Hans Wilsdorf đã tạo ra chiếc đồng hồ đeo tay chống thấm nước đầu tiên - Oyster - và đã phát triển một bộ sưu tập những chiếc đồng hồ đã trở thành biểu tượng của quy trình công nghệ chế tác đồng hồ.
+                    </p>
+
+                    <a class="btn">
+                        MUA NGAY
+                    </a>
+                </div>
+              
+             </div>
+
+             
+             <div class="bgimg slide-item fade" style="background-image: url(./img/Banchay_Longines_banner-1024x427.jpg)">
+                <div class="caption">
+                    <h2>
+                        ĐỒNG HỒ ROLEX
+                    </h2>
+
+                    <p>
+                        Đồng hồ Rolex được thiết kế và chế tạo để trường tồn nhờ bàn tay và khối óc của các thợ chế tác đồng hồ, nhà thiết kế và kỹ sư chuyên biệt mang kỹ năng và kiến thức truyền tải vào từng chiếc đồng hồ Rolex. 
+                    </p>
+
+                    <a class="btn">
+                        MUA NGAY
+                    </a>
+                </div>
+
+             </div>
+
+            
+             <div class="slide-control">
+                <div class="slide-control-wrapper">
+                    <span class="dot" onclick="chooseSlide(0)"></span>
+                    <span class="dot"  onclick="chooseSlide(1)"></span>
+                    <span class="dot" onclick="chooseSlide(2)" ></span>
+
+                </div>
+             </div>
+       
+    </div>
+
+    <!-- Social Fixed -->
+    <ul class="social-fixed">
+        <li class="social-fixed-item"><a href=""><i class='bx bxl-twitter'></i></a></li>
+        <li class="social-fixed-item"><a href=""><i class='bx bxl-facebook' ></i></a></li>
+        <li class="social-fixed-item"><a href=""><i class='bx bxl-youtube' ></i></a></li>
+        <li class="social-fixed-item"><a href=""><i class='bx bxl-instagram' ></i></a></li>
+    </ul>
+
+    <div id="hero-section-mini" class="hero-section-mini ">
+        <div class="container row">
+            <div class="hero-section-mini-item col-3 col-md-6 col-sm-6">
+                <img src="./img/icon_service_1.svg" alt="">
+                 <h3>VẬN CHUYỂN TOÀN CẦU</h3>
+                 <p>Chúng tôi miễn phí vận chuyển tất cả đơn hàng trị giá trên 2.000.000Đ</p>
+            </div>
+   
+            <div class="hero-section-mini-item col-3 col-md-6 col-sm-6">
+               <img src="./img/icon_service_2.svg" alt="">
+                <h3>HỖ TRỢ ONLINE 24/24</h3>
+                <p>Chúng tôi luôn hỗ trợ khách hàng 24/24 tất cả ngày trong tuần</p>
+           </div>
+   
+           <div class="hero-section-mini-item col-3 col-md-6 col-sm-6">
+               <img src="./img/icon_service_3.svg" alt="">
+                <h3>MIỄN PHÍ ĐỔI TRẢ</h3>
+                <p>Miễn phí đổi trả trong vòng 15 ngày đầu tiên áp dụng cho tất cả các mặt hàng</p>
+           </div>
+   
+           <div class="hero-section-mini-item col-3 col-md-6 col-sm-6">
+               <img src="./img/icon_service_4.svg" alt="">
+                <h3>QUÀ TẶNG HẤP DẪN</h3>
+                <p>Chương trình khuyến mãi cực lớn và hấp dẫn vào mỗi chủ nhật hàng tuần</p>
+           </div>
+
+        </div>
+    </div>
+
+    <section id="product-list" class="product-list">
+        <div class="container">
+            <div class="section-title">
+                <h3>DANH MỤC SẢN PHẨM</h3>
+                <div class="title-line"></div>
+            </div>
+            <div class="product-list-item-wrapper ">
+                   
+                        <div onclick="Male()" style="background-image: url('./img/cate_1.jpg');" class="product-list-item ">
+                            <div class="product-list-item-content">
+                                <h1>Đồng hồ nam</h1>
+                                <p>Xem thêm<i class='bx bx-right-arrow-alt'></i></p>
+                            </div>
+                       </div>
+
+                  
+                  
+                        <div onclick = 'Female()' style="background-image: url(./img/cate_3.jpg);" class="product-list-item ">
+                            <div class="product-list-item-content">
+                                <h1>Đồng hồ nữ</h1>
+                                <p>Xem thêm<i class='bx bx-right-arrow-alt'></i></p>
+                            </div>
+                        </div>
+
+                   
+
+                 
+                      <div onclick="Subarchitecture()" style="background-image: url(./img/cate_2.jpg);" class="product-list-item">
+                          <div class="product-list-item-content">
+                              <h1>Phụ kiện nữ</h1>
+                              <p>Xem thêm<i class='bx bx-right-arrow-alt'></i></p>
+                          </div>
+                       </div>
+          
+                      <div onclick="Subarchitecture()" style="background-image: url(./img/cate_4.jpg)"class="product-list-item ">
+                          <div class="product-list-item-content">
+                              <h1>Phụ kiện nam</h1>
+                              <p>Xem thêm<i class='bx bx-right-arrow-alt'></i></p>
+                          </div>
+                     </div>
+
+           </div>
+
+        </div>
+        
+    </section>
+
+    <section id="best-sale" class="best-sale">
+        <div class="container">
+            <div class="section-title" >
+                <h3>TOP SẢN PHẨM BÁN CHẠY</h3>
+                <div class="title-line"></div>
+            </div>
+            <div class="menu-best-sale-title row">
+                
+                <div id="nam" class="menu-best-sale-title-item col-sm-12"  onclick="changeProducts('nam' , this)">
+                    <h3>Đồng hồ nam</h3>
+                </div>
+
+                <div id="nu" class="menu-best-sale-title-item" onclick = "changeProducts('nu' , this)">
+                    <h3>Đồng hồ nữ</h3>
+                </div>
+
+
+                <div id="phukien" class="menu-best-sale-title-item" onclick = "changeProducts('phukien' , this)">
+                    <h3>Phụ kiện</h3>
+                </div>
+            </div>
+           
+
+            <div id="content"  class="menu-best-sale-content row">
+                <!-- <div class="menu-best-sale-content-item col-3 col-md-4 col-sm-6">
+                           <div class="menu-best-sale-content-item-img">
+                                  <img src="./img/nam1.jpg" alt="" class="product-img">
+                                  <i class='bx bx-bullseye product-icon eye'onclick="ModalProduct()"></i>
+                                  <i class='bx bx-shopping-bag product-icon'</i>
+                                  <h5 class="discount"></h5>
+                           </div>
+
+                           <div class="menu-best-sale-content-item-content">
+                                <h3 class="item-content-name">Black Pink</h3>
+                                <div class="price">
+                                    <div class="price-old price-item"><del>4.500.000đ</del></div>
+                                    <div class="price-new price-item">3.200.000đ</div>
+                                </div>
+                           </div>
+                </div> -->
+               
+            </div>
+
+             <div class="pagination">
+                 <button>1</button >
+                 <button id="pagination-2" >2</button> 
+             </div>
+                
+               
+        
+        </div>
+    </section>
+
+    <!-- Modal Info Product-->
+
+    <div class="modal-product">
+        <i class='bx bx-x close-modal-product'></i>
+        <div class="modal-wrapper row">
+            <div class="modal-left col-6">
+                  <div class="modal-left-top">
+                       <img src="./img/nam1.jpg" alt="">
+                  </div>
+
+                  <div class="modal-left-bottom">
+                       <div  class="modal-left-bottom-item anh1" >
+                            <img src="./img/nam1.jpg" alt="" onclick="ChangeModalPicture(this.src)">
+                       </div>
+
+                       <div class="modal-left-bottom-item anh2" >
+                             <img src="./img/nam1.1.jpg" alt="" onclick="ChangeModalPicture(this.src)" >
+                       </div>
+
+                       <div class="modal-left-bottom-item anh3">
+                             <img src="./img/nam1.2.jpg" alt="" onclick="ChangeModalPicture(this.src)">
+                       </div>
+                       
+                       <div class="modal-left-bottom-item anh4" >
+                             <img src="./img/nam1.3.jpg" alt="" onclick="ChangeModalPicture(this.src)">
+                       </div>
+                  </div>
+
+            </div>
+
+            <div class="modal-right col-6">
+                    <h3>Black Pink</h3>
+                    <div class="modal-oringal">
+                        <p>Thương hiệu : Đang cập nhật </p>  
+                        <div class="line"></div>
+                        <p>Mã sản phẩm : Đang cập nhật</p>
+                    </div>
+                    <div class="modal-price">
+                        <div class="modal-price-new"><h1>3.200.000đ</h1></div>
+                  
+                        <div class="modal-price-old"><p><del>4.500.000đ</del></p></div>
+                    </div>
+
+                    
+
+                    <a  href="#" class="btn btn-modal-info">
+                        Thêm vào sản phẩm
+                    </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cart Product -->
+
+    <div class="modal-cart">
+        <i class='bx bx-x close-modal-cart'></i>
+        <div class="modal-cart-top">
+            <h3>Giỏ hàng của bạn có <p id="length-num" >0</p> sản phẩm</h3>
+        </div>
+        <div class="modal-wrapper">
+
+    
+            <div class="modal-cart-bottom">
+               
+                <div class="cart-table">
+                    <table class="cart-table-list">
+                        <img src="./img/empty-cart.png" alt="" class="emty-cart">
+                        <tr> 
+                            <th width="480px" height="40px" >Sản phẩm</th>
+                            <th  width= "170px">Đơn giá</th>
+                            <th width= "170px">Số lượng</th>
+                            <th width= "170px">Thành tiền</th>
+                        </tr>
+        
+                       
+
+
+                        
+                      
+
+                    
+    
+                    </table>
+                </div>
+    
+               
+            </div>
+    
+            <div class="sum-total">
+                <p>Tổng tiền thanh toán: </p>
+                <h3 id="number-total">0</h3>
+            </div>
+    
+            <div class="cart-button">
+                  <a href="#" class="btn btn-modal-cart">
+                      <p class="thanhtoan" >Thực hiện thanh toán</p>
+                  </a>
+    
+                  <a href="#" class="btn btn-modal-cart">
+                      <p>Tiếp tục mua hàng</p>
+                  </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal introduce -->
+      <div class="modal-introduce">
+        <i class='bx bx-x close-modal-introduce'></i>
+        <form action="">
+
+            <div class="login-header">
+                <h2>GIỚI THIỆU</h2>
+            </div>
+            <div class="form-wrapper">
+                
+
+                <div class="login-content">
+                    <p>Claten là chuỗi cửa hàng đồng hồ được yêu thích và lớn nhất thế giới, trực thuộc tập đoàn SGU!
+                        (www.SGU.com). Claten tự hào hiện diện tại 100 quốc gia trên khắp thế giới từ tháng 10 năm
+                        2020.</p>
+                    <p>Sự kiện này đánh dấu một cột mốc ý nghĩa để minh chứng cho sự cam kết của nhãn hàng về chất lượng
+                        đồng hồ sang trọng
+                        và phong cách phục vụ chuyên nghiệp.</p>
+                    <p>Claten có mặt tại Việt Nam từ năm 2020 với 100% vốn SGU; và hiện đã phát triển hơn 100 cửa
+                        hàng với
+                        trên 5.000 nhân viên.</p>
+                    <p>Claten Việt Nam - nơi bạn được thỏa sức thể hiện chính mình với cơ hội hấp dẫn để phát triển
+                        cá nhân lẫn
+                        nghề nghiệp toàn diện!</p>
+                    <p>Chúng tôi tân tâm mang đến một môi trường làm việc thân thiện và chuyên nghiệp cho từng nhân
+                        viên, nỗ lực
+                        hoàn thiện giá trị “Cùng nhau hướng đến một Claten TUYỆT VỜI!”</p>
+                    <div style="display: flex; justify-content: center;">
+                        <img src="./img/mapwatch.png" alt="Bản đồ chi nhánh" style="width:70%;">
+                    </div>
+                </div>   
+
+            </div>
+        </form>
+      </div>   
+    <!-- Login Form -->
+
+        <div class="modal-login">
+            <i class='bx bx-x close-modal-login'></i>
+            <form action="">
+
+                <div class="login-header">
+                    <h2>ĐĂNG NHẬP</h2>
+                </div>
+                <div class="form-wrapper">
+                    
+    
+                    <div class="login-content">
+                        <div class="login-content-item">
+                           <h4>Email đăng nhập</h4>
+                           <input  id="LogIn-email" value="" type="text" placeholder="Vui lòng nhập email" class="emailkh1" >
+                           <span id="errorEmail" class="errorMessage">Vui lòng nhập trường này</span>
+                        </div>
+
+                        <div class="login-content-item">
+                            <h4>Mật khẩu</h4>
+                            <input id="LogIn-pass" value="" type="password" placeholder="Vui lòng nhập mật khẩu" >
+                            <span  id="errorPass" class="errorMessage">Mật khẩu phải nhiều hơn 8 và nhỏ hơn 16 ký tự</span>
+                         </div>
+                    </div>
+    
+                    <a href="#" class=" btn-login" onclick = "Login()">
+                           Đăng Nhập
+                    </a>
+
+                    <p>Chưa có tài khoản ? <span class="Register" >Đăng ký ngay</span></p>
+
+                </div>
+            </form>
+        </div>
+
+    <!-- Sign Up -->
+
+         <div class="modal-signup">
+            <i class='bx bx-x close-modal-signup'></i>
+            <form action="">
+
+                <div class="login-header">
+                    <h2>ĐĂNG KÝ TÀI KHOẢN</h2>
+                </div>
+                <div class="form-wrapper">
+                    
+    
+                    <div class="login-content">
+                        <div class="login-content-item">
+                           <h4>Họ tên</h4>
+                           <input  id="RegisterForm-name"  type="text" placeholder="Vui lòng nhập họ tên" >
+                           <span id="errorName" class="errorMessage">Vui lòng nhập trường này</span>
+                        </div>
+
+                        <div class="login-content-item">
+                            <h4>Địa chỉ email</h4>
+                            <input id="RegisterForm-email" type="email" placeholder="Vui lòng nhập địa chỉ email" class="emailkh2" >
+                            <span  id="errorEmailRegister" class="errorMessage">Email không hợp lệ</span>
+                         </div>
+
+                         <div class="login-content-item">
+                            <h4>Mật khẩu</h4>
+                            <input id="RegisterForm-pass" type="password" placeholder="Vui lòng nhập mật khẩu" >
+                            <span  id="errorPassRegister" class="errorMessage">Mật khẩu phải nhiều hơn 8 và nhỏ hơn 16 ký tự</span>
+                         </div>
+
+
+                         <div class="login-content-item">
+                            <h4>Nhập lại mật khẩu</h4>
+                            <input id="RegisterForm-confirmpass" type="password" placeholder="Vui lòng nhập lại mật khẩu" >
+                            <span  id="errorcofirmPass" class="errorMessage">Mật khẩu nhập lại không đúng</span>
+                         </div>
+                    </div>
+    
+                    <a onclick = 'Register2()' href="#" class="btn-login" >
+                           Đăng Ký
+                    </a>
+
+                    <p>Đã có tài khoản ? <span class="SignUp" >Đăng nhập</span></p>
+
+                </div>
+            </form>
+         </div>
+
+    <!-- Register -->
+
+
+    <!-- Flash sale section -->
+
+    <section id="flash-sale" class="flash-sale">
+        <div class="container ">
+            <div class="section-title" >
+                <h3 class="pt-60">FLASH SALE HÀNG TUẦN</h3>
+                <div class="title-line"></div>
+            </div>
+            <div class="flashsale-wrapper row ">
+                <div class="modal-left col-5 col-md-6 col-sm-12">
+                      <div class="modal-left-top">
+                           <div class="flash-img-wrapper">
+                               <img src="./img/nam1.jpg" alt="" class="flash-sale-img" >
+ 
+                           </div>
+                      </div>
+    
+                </div>
+    
+                <div class="modal-right col-7 col-md-6 col-sm-12">
+                        <h2>Black Pink</h2>
+                        <div class="modal-price base-line">
+                            <div class="modal-price-new"><h2>3.200.000đ</h2></div>
+                      
+                            <div class="modal-price-old"><h3><del>4.500.000đ</del></h3></div>
+                        </div>
+
+                        <p>Đồng hồ MVMT Black Pink dòng Classic với thiết kế tối giản tinh tế cho các quý ông hiện đại.<br> Nhập khẩu chính hãng từ US.Free Ship toàn quốc ! </p>
+                        <a onclick="" href="#" class="btn btn-flash-sale">
+                             Mua Ngay
+                        </a>
+                </div>
+            </div>
+
+           
+
+        </div>
+    </section>
+
+
+    <section id="male" class="male">
+        <div class="container">
+            <div class="section-title" >
+                <h3>ĐỒNG HỒ NAM</h3>
+                <div class="title-line"></div>
+            </div>
+             <div class="male-top row">
+                    <div id="male-top" class="male-top-left col-6 row">
+                        <!-- <div class="menu-best-sale-content-item col-6 col-md-4 col-sm-6">
+                            <div class="menu-best-sale-content-item-img">
+                                   <img src="./img/nam2.jpg" alt="" class="product-img">
+                                   <i class='bx bx-bullseye product-icon eye'onclick="ModalProduct()"></i>
+                                   <i class='bx bx-shopping-bag product-icon'></i>
+                                    
+                                   <h5 class="discount"></h5>
+                            </div>
+ 
+                            <div class="menu-best-sale-content-item-content">
+                                 <h3 class="item-content-name">Black Pink</h3>
+                                 <div class="price">
+                                     <div class="price-old price-item"><del>4.500.000đ</del></div>
+                                     <div class="price-new price-item">3.200.000đ</div>
+                                 </div>
+                            </div>
+                      </div>     -->
+                      
+
+                        <!-- <div class="menu-best-sale-content-item col-6 col-md-4 col-sm-6">
+                            <div class="menu-best-sale-content-item-img">
+                                   <img src="./img/nam2.jpg" alt="" class="product-img">
+                                   <i class='bx bx-bullseye product-icon eye'onclick="ModalProduct()"></i>
+                                   <i class='bx bx-shopping-bag product-icon'></i>
+                                    
+                                   <h5 class="discount"></h5>
+                            </div>
+ 
+                            <div class="menu-best-sale-content-item-content">
+                                 <h3 class="item-content-name">Black Pink</h3>
+                                 <div class="price">
+                                     <div class="price-old price-item"><del>4.500.000đ</del></div>
+                                     <div class="price-new price-item">3.200.000đ</div>
+                                 </div>
+                            </div>
+                      </div>     -->
+                      
+                          
+                 </div>
+
+                    <div class="male-top-right col-6 no-padding">
+                          <img src="./img/img_banner_watch_men.jpg" alt="">
+                    </div>
+             </div>
+
+             <div id="male-bottom" class="male-bottom row">
+                   
+             </div>
+
+        </div>
+    </section>
+
+    <section id="female" class="section-female">
+        <div class="container">
+            <div class="section-title" >
+                <h3 class="pt-60" >ĐỒNG HỒ NỮ</h3>
+                <div class="title-line"></div>
+            </div>
+             <div class="female-top row">
+
+              <div class="male-top-right col-6 no-padding">
+                    <img src="./img/img_banner_watch_women.jpg" alt="">
+              </div>
+
+               <div id="female-top" class="female-top-left col-6 row">
+                        <div class="menu-best-sale-content-item col-6 col-md-4 col-sm-6">
+                            <div class="menu-best-sale-content-item-img">
+                                   <img src="./img/nam2.jpg" alt="" class="product-img">
+                                   <i class='bx bx-bullseye product-icon eye'onclick="ModalProduct()"></i>
+                                   <i class='bx bx-shopping-bag product-icon'></i>
+                                    
+                                   <h5 class="discount"></h5>
+                            </div>
+ 
+                            <div class="menu-best-sale-content-item-content">
+                                 <h3 class="item-content-name">Black Pink</h3>
+                                 <div class="price">
+                                     <div class="price-old price-item"><del>4.500.000đ</del></div>
+                                     <div class="price-new price-item">3.200.000đ</div>
+                                 </div>
+                            </div>
+                      </div>    
+                      
+
+                        <div class="menu-best-sale-content-item col-6 col-md-4 col-sm-6">
+                            <div class="menu-best-sale-content-item-img">
+                                   <img src="./img/nam2.jpg" alt="" class="product-img">
+                                   <i class='bx bx-bullseye product-icon eye'onclick="ModalProduct()"></i>
+                                   <i class='bx bx-shopping-bag product-icon'></i>
+                                    
+                                   <h5 class="discount"></h5>
+                            </div>
+ 
+                            <div class="menu-best-sale-content-item-content">
+                                 <h3 class="item-content-name">Black Pink</h3>
+                                 <div class="price">
+                                     <div class="price-old price-item"><del>4.500.000đ</del></div>
+                                     <div class="price-new price-item">3.200.000đ</div>
+                                 </div>
+                            </div>
+                      </div>    
+                      
+                          
+                </div>
+
+                   
+             </div>
+
+             <div id="female-bottom" class="female-bottom row">
+                   
+             </div>
+
+        </div>
+    </section>
+
+    <section id="sub-architecture" class="sub-architecture">
+        <div class="container">
+            <div class="section-title" >
+                <h3 >PHỤ KIỆN</h3>
+                <div class="title-line"></div>
+            </div>
+
+            <div  class="sub-architecture-content row flex-wrap">
+                <div id="pk" class="sub-architecture-content-left row col-6 col-md-6 col-sm-12">
+                    <div class="menu-best-sale-content-item col-6 col-md-4 col-sm-6">
+                        <div class="menu-best-sale-content-item-img">
+                               <img src="./img/nam2.jpg" alt="" class="product-img">
+                               <i class='bx bx-bullseye product-icon eye'onclick="ModalProduct()"></i>
+                               <i class='bx bx-shopping-bag product-icon'></i>
+                                
+                               <h5 class="discount"></h5>
+                        </div>
+
+                        <div class="menu-best-sale-content-item-content">
+                             <h3 class="item-content-name">Black Pink</h3>
+                             <div class="price">
+                                 <div class="price-old price-item"><del>4.500.000đ</del></div>
+                                 <div class="price-new price-item">3.200.000đ</div>
+                             </div>
+                        </div>
+                  </div>    
+                </div>
+
+                <div class="sun-architecture-content-right col-6 col-md-6 col-sm-12 no-padding">
+                        <img src="./img/img_banner_accessory.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="infomation" class="infomation">
+        <div class="container">
+            <div class="section-title" >
+                <h3 >TIN TỨC</h3>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="infomation-content">
+                   <div onclick="PageSearch()" class="infomation-content-item">
+                      <img src="./img/information1.jpg" alt="">
+                      <h3>Cách chọn mua dây da đồng hồ theo phong thủy 
+                          mà bạn nên biết
+                      </h3>
+                      <div class="time-post">
+                          
+                              <p class="time-post-type" >WATCH</p>
+
+                          
+                          <i class='bx bxs-watch-alt' ></i>
+                          <p class="date-post" >27/7/2021</p>
+                      </div>
+                      <p class="des">
+                        Người mệnh Kim Mặt đồng hồ có dạng hình tròn, 
+                        hình oval, hình elip tượng trưng cho hành kim, 
+                        bạn nên chọn những ...
+                      </p>
+                      <div class="infomation-more">
+                          
+                          <p>Xem thêm<i class='bx bx-right-arrow-alt'></i></p>
+                      </div>
+                   </div>
+
+
+                   <div onclick="PageSearch()" class="infomation-content-item">
+                    <img src="./img/information2.jpg" alt="">
+                    <h3>Cách phối dây da đơn giản mà cực kỳ hiệu quả
+                    </h3>
+                    <div class="time-post">
+                        <p class="time-post-type">TIN TỨC</p>
+                        <i class='bx bxs-watch-alt' ></i>
+                        <p class="date-post"  >27/7/2021</p>
+                    </div>
+                    <p class="des">
+                        Phối màu đồng bộ với mặt đồng hồ hoặc phù hợp với 
+                        một chi tiết nhỏ của đồng hồ Hiện nay trên thị trường 
+                        có rất n...
+                    </p>
+                    <div class="infomation-more">
+                       
+                        <p>Xem thêm<i class='bx bx-right-arrow-alt'></i></p>
+                    </div>
+                 </div>
+
+
+                 <div onclick="PageSearch()" class="infomation-content-item">
+                    <img src="./img/information3.jpg" alt="">
+                    <h3>Hướng dẫn cách lên dây cót đồng hồ cơ đúng cách
+                    </h3>
+                    <div class="time-post">
+                        
+                        <i class='bx bxs-watch-alt' ></i>
+                        <p class="date-post" >27/7/2021</p>
+                    </div>
+                    <p class="des">
+                        Phân loại đồng hồ dựa trên cách lên dây cót Có 2 loại
+                         đồng hồ cơ: 
+                        Đồng hồ cơ lên dây cót bằng tay (Hand winding)...
+                    </p>
+                    <div class="infomation-more">
+        
+                        <p>Xem thêm<i class='bx bx-right-arrow-alt'></i></p>
+                    </div>
+                 </div>
+
+                  
+            </div>
+        </div>
+    </section>
+
+    <section id="brand" class="brand">
+        <div class="container">
+            <div class="brand-list">
+                <div class="brand-item">
+                    <img src="./img/brand1.jpg" alt="">
+                </div>
+    
+                <div class="brand-item">
+                    <img src="./img/brand2.jpg" alt="">
+                </div>
+    
+                <div class="brand-item">
+                    <img src="./img/brand3.jpg" alt="">
+                </div>
+    
+                <div class="brand-item">
+                    <img src="./img/brand4.jpg" alt="">
+                </div>
+    
+    
+                <div class="brand-item">
+                    <img src="./img/brand5.jpg" alt="">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+   <section id="search" class="search">
+       <div class="no-search">
+           <img src="./img/a60759ad1dabe909c46a817ecbf71878 (1).png" alt="" >
+            <h3>Không tìm thấy sản phẩm nào</h3>
+            <h3>Hãy thử sử dụng các từ khóa chung chung hơn</h3>
+       </div>
+    <div class="search-top ">
+      
+
+            <div class="num-result " >
+                <p>Loại: 
+                    <select name="" id="select-product">
+                        <option value="all">Tất cả</option>
+                        <option value="nam">Đồng hồ nam</option>
+                        <option value="nu">Đồng hồ nữ</option>
+                        <option value="phukien">Phụ kiện</option>
+                    </select>
+    
+                </p> 
+                <p>Số kết quả phù hợp: <span></span> </p>
+    
+            </div>
+    
+            <div class="price-range">
+                <p>Giá:</p>
+                <input id="min-price" type="number" placeholder = "Từ...">
+                <input id="max-price" type="number" placeholder = "Đến...">
+    
+            </div>
+    
+            <div class="sort ">
+                <p>Sắp xếp: </p>
+                <select id="select-sort" name="" id="">
+                    <option value="LowToHeight">Giá: Thấp tới cao</option>
+                    <option value="HeightToLow">Giá: Cao tới thấp </option>
+                </select>
+            </div>
+
+            <div onclick="timKiemNangCao() " class="searchUpdate">
+                <i class='bx bx-search'></i>
+             </div>
+         
+        </div>
+
+        
+    
+         <div class="container">
+             
+
+             <div id="search-content" class="search-content row">
+
+             </div>
+
+            
+
+             <div class="search-pagination">
+                  <button>1</button>
+                   <button class="second" >2</button>
+                   <button>3</button>
+             </div>
+         </div>
+   </section>
+
+   <section id="bill" class="bill">
+       <div class="container">
+        <div class="section-title" >
+            <h3>Đơn hàng đã đặt</h3>
+            <div class="title-line"></div>
+        </div>
+
+        <div class="cart-checkout">
+            <table class="checkout">
+               
+                
+
+               <!-- <tr class="checkout-item" >
+                   <th id="bill-num" >
+
+                   </th>
+
+                   <th id="bill-detail">
+
+                   </th>
+
+                   <th id="bill-date" >
+
+                   </th>
+
+                   <th id ="bill-trans">
+                        
+                   </th>
+
+                   <th id="bill-total" >
+
+                   </th>
+               </tr> -->
+
+
+                
+              
+
+            
+
+            </table>
+        </div>
+        <a onclick="PageHome()" href="#" class="btn btn-checkout">
+            Quay về trang chủ
+        </a>
+       </div>
+
+       
+   </section>
+
+   <section id="PageSearch">
+    <div class="picture">
+        <a href="#" >                         
+            <img src="https://bizweb.dktcdn.net/100/438/171/themes/836357/assets/img_banner_brea_blog.jpg?1635349608220" width="100%" alt="Claten" >
+       </a>
+    </div>
+    <div class="content" style="padding-left:10%; padding-right:10%;padding-top:30px">
+        <div class= row>
+            <div class= "col-6 col-md-6 col-sm-12">
+                <a href="#">
+                    <img style="display:block" src="https://bizweb.dktcdn.net/thumb/grande/100/438/171/articles/t7.jpg?v=1632731778567" width="100%s" alt="Cách chọn mua dây da đồng hồ theo phong thủy mà bạn nên biết" >
+                </a>
+            </div>
+
+            <div style="margin-top: 20px;" class= "col-6 col-md-6 col-sm-12" >
+                <a href="#"><h3 style="color:black">Cách chọn mua dây da đồng hồ theo phong thủy mà bạn nên biết</h3></a>
+                <div style="padding-top:10px">
+                    Người mệnh Kim Mặt đồng hồ có dạng hình tròn, hình oval, hình elip tượng trưng cho hành kim, 
+                    bạn nên chọn những kiểu hình mặt đồng hồ này để tương hợp với bản mệnh. Dây đeo màu nâu, vàng, vàng 
+                    bò tượng trưng cho hành thổ (Thổ sinh Kim) sẽ rất hợp với người mệnh Kim. Đeo dây màu nâu man...                    
+                </div>
+                <div style="padding-top:10px">
+                    <a href="#" title="Xem thêm">
+                        <small style="color:black">
+                            Xem thêm
+                        </small>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="11" viewBox="0 0 19 11" fill="none">
+                            <path d="M13.0638 9.1707C12.8731 9.35708 12.8731 9.66385 13.0638 9.85023C13.2484 10.0307 13.5433 10.0307 13.7279 9.85023L17.7215 5.94695C17.9724 5.70177 17.9724 5.2982 17.7215 5.05301L13.7279 1.14977C13.5433 0.969332 13.2484 0.969332 13.0638 1.14977C12.8731 1.33614 12.8731 1.64292 13.0638 1.82929L15.6793 4.38568C15.9197 4.62065 15.7534 5.02886 15.4172 5.02886L1.34615 5.02885C1.08594 5.02885 0.875 5.2398 0.875 5.50001C0.875 5.76022 1.08594 5.97116 1.34615 5.97116L15.4172 5.97117C15.7533 5.97117 15.9197 6.37938 15.6793 6.61435L13.0638 9.1707Z" fill="#F97E6C" stroke="#F97E6C" stroke-width="0.25"></path>
+                        </svg>
+                    </a>   
+                </div>       
+            </div>
+        </div>
+        <div style="margin-top:10px; border-top: 1px solid #ccc"></div>
+<!----------------------------------------------------------------------------------------------------------------------------------------->
+        
+        <ul >
+            <li style="padding-top:10px">
+                <div style="display:flex">
+                    <div>
+                        <a href="#">
+                            <img style=" width: 150px; height:100%; display:flex" src="https://bizweb.dktcdn.net/thumb/large/100/438/171/articles/t8.jpg?v=1632731806863"  alt="Cách phối dây da đơn giản mà cực kỳ hiệu quả" >
+                        </a>
+                    </div>
+                        <div style=" text-align:left;padding-left: 15px;">
+                            <a href="#">
+                                <h3 style="color:black">
+                                    Cách phối dây da đơn giản mà cực kỳ hiệu quả
+                                </h3>
+                            </a>
+                            <div>
+                                <small style="color:white; background-color:#f97e6c">Tin tức</small>
+                                <small style="padding-left: 15px;">Cập nhật 4 giờ trước</small>
+                            </div>                                            
+                        </div>
+                </div>
+                <div style="margin-top: 10px;border-top: 1px solid #ccc"></div>
+            </li>
+            <li style="padding-top:10px">
+                <div style="display:flex">
+                    <div>
+                        <a href="#">
+                            <img style=" width: 150px; height:100%; display:flex" src="https://bizweb.dktcdn.net/thumb/large/100/438/171/articles/t6.jpg?v=1632731735470"  alt="Hướng dẫn cách lên dây cót đồng hồ cơ đúng cách" >
+                        </a>
+                    </div>
+                        <div style=" text-align:left;padding-left: 15px;">
+                            <a href="#">
+                                <h3 style="color:black">
+                                    Hướng dẫn cách lên dây cót đồng hồ cơ đúng cách
+                                </h3>
+                            </a>
+                            <div>
+                                <small style="color:white; background-color:#f97e6c">Hướng dẫn</small>
+                                <small style="padding-left: 15px;">Cập nhật 4 giờ trước</small>
+                            </div>                                            
+                        </div>
+                </div>
+                <div style="margin-top: 10px;border-top: 1px solid #ccc"></div>
+            </li>
+            <li style="padding-top:10px">
+                <div style="display:flex">
+                    <div>
+                        <a href="#">
+                            <img style=" width: 150px; height:100%; display:flex" src="https://bizweb.dktcdn.net/thumb/large/100/438/171/articles/t5.jpg?v=1632731702533"  alt="Mẹo nhỏ giúp bạn bảo quản và sử dụng đồng hồ đeo tay đúng cách" >
+                        </a>
+                    </div>
+                        <div style=" text-align:left;padding-left: 15px;">
+                            <a href="#">
+                                <h3 style="color:black">
+                                    Mẹo nhỏ giúp bạn bảo quản và sử dụng đồng hồ đeo tay đúng cách
+                                </h3>
+                            </a>
+                            <div>
+                                <small style="color:white; background-color:#f97e6c">Mẹo vặt</small>
+                                <small style="padding-left: 15px;">Cập nhật 4 giờ trước</small>
+                            </div>                                            
+                        </div>
+                </div>
+                <div style="margin-top: 10px;border-top: 1px solid #ccc"></div>
+            </li>
+            <li style="padding-top:10px">
+                <div style="display:flex">
+                    <div>
+                        <a href="#">
+                            <img style=" width: 150px; height:100%; display:flex" src="https://bizweb.dktcdn.net/thumb/large/100/438/171/articles/t4.jpg?v=1632731610123"  alt="Cách chỉnh ngày giờ trên đồng hồ 6 kim 3 nút đơn giản" >
+                        </a>
+                    </div>
+                        <div style=" text-align:left;padding-left: 15px;">
+                            <a href="#">
+                                <h3 style="color:black">
+                                    Cách chỉnh ngày giờ trên đồng hồ 6 kim 3 nút đơn giản
+                                </h3>
+                            </a>
+                            <div>
+                                <small style="color:white; background-color:#f97e6c">Hướng dẫn</small>
+                                <small style="padding-left: 15px;">Cập nhật 4 giờ trước</small>
+                            </div>                                            
+                        </div>
+                </div>
+                <div style="margin-top: 10px;border-top: 1px solid #ccc"></div>
+            </li>
+            <li style="padding-top:10px">
+                <div style="display:flex">
+                    <div>
+                        <a href="#">
+                            <img style=" width: 150px; height:100%; display:flex" src="https://bizweb.dktcdn.net/thumb/large/100/438/171/articles/t3.jpg?v=1632731554247"  alt="Cách làm mềm dây da đồng hồ, dễ chịu khi đeo" >
+                        </a>
+                    </div>
+                        <div style=" text-align:left;padding-left: 15px;">
+                            <a href="#">
+                                <h3 style="color:black">
+                                    Cách làm mềm dây da đồng hồ, dễ chịu khi đeo
+                                </h3>
+                            </a>
+                            <div>
+                                <small style="color:white; background-color:#f97e6c">Mẹo vặt</small>
+                                <small style="padding-left: 15px;">Cập nhật 4 giờ trước</small>
+                            </div>                                            
+                        </div>
+                </div>
+                <div style="margin-top: 10px;border-top: 1px solid #ccc"></div>
+            </li>
+            <li style="padding-top:10px">
+                <div style="display:flex">
+                    <div>
+                        <a href="#">
+                            <img style=" width: 150px; height:100%; display:flex" src="https://bizweb.dktcdn.net/thumb/large/100/438/171/articles/t2.jpg?v=1632731475247"  alt="Hướng dẫn cách dùng đồng hồ G-shock để tìm điện thoại" >
+                        </a>
+                    </div>
+                        <div style=" text-align:left;padding-left: 15px;">
+                            <a href="#">
+                                <h3 style="color:black">
+                                    Hướng dẫn cách dùng đồng hồ G-shock để tìm điện thoại
+                                </h3>
+                            </a>
+                            <div>
+                                <small style="color:white; background-color:#f97e6c">Hướng dẫn</small>
+                                <small style="padding-left: 15px;">Cập nhật 4 giờ trước</small>
+                            </div>                                            
+                        </div>
+                </div>
+                <div style="margin-top: 10px;border-top: 1px solid #ccc"></div>
+            </li>
+            <li style="padding-top:10px">
+                <div style="display:flex">
+                    <div>
+                        <a href="#">
+                            <img style=" width: 150px; height:100%; display:flex" src="https://bizweb.dktcdn.net/thumb/grande/100/438/171/articles/t1.jpg?v=1632730894280"  alt="Cách đánh bóng mặt kính đồng hồ bị xước hiệu quả" >
+                        </a>
+                    </div>
+                        <div style=" text-align:left;padding-left: 15px;">
+                            <a href="#">
+                                <h3 style="color:black">
+                                    Cách đánh bóng mặt kính đồng hồ bị xước hiệu quả
+                                </h3>
+                            </a>
+                            <div>
+                                <small style="color:white; background-color:#f97e6c">Mẹo vặt</small>
+                                <small style="padding-left: 15px;">Cập nhật 4 giờ trước</small>
+                            </div>                                            
+                        </div>
+                </div>
+                <div style="margin-top: 10px;border-top: 1px solid #ccc"></div>
+            </li>
+        </ul>
+        
+    </div>
+
+   </section>
+
+   <section id="PageContact" class="PageContact">
+    <style>
+
+        .bread-crumb {
+            display: flex;
+            text-align: center;
+            background-color: #fff;
+            padding: 45px 0;
+        }
+        
+        .bread-crumb ul li{
+            float: left;
+            padding: 5px;
+            line-height: 15px;
+            color: #f97e6c;
+            
+        }
+        .bread-crumb ul li a{
+            color:black;
+        }
+        .bread-crumb ul li a :hover{
+            color: #f97e6c;
+        }
+        
+        section{
+            display: block;
+        }
+        .d-none{
+            display: none!important;
+        }
+        .container {
+            margin : 0 auto;
+            padding: 0 10%;
+        }
+        .container h2{
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .container h4{
+            font-size: 20px;
+            text-transform: uppercase;
+            line-height: 24px;
+            font-weight: bold;
+            color: #494949;
+        }
+        .container h6{
+            font-size: 18px;
+            margin-top: 35px;
+            font-weight: bold;
+            color: #494949;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        .contact-item{
+            margin-top: 30px;
+            display: flex;
+            justify-items: center;
+        }
+        .contac-icon{
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            width: 24px;
+            height: 24px;
+            background-color: #f97e6c;
+            margin-right: 20px;
+            
+        }
+        .contac-icon i{
+            font-size: 1.5rem;
+            color: #fff;
+        }
+        .contact-page .contact-item  a{
+            color: black;
+        }
+        .contact-page .contact-item  a :hover{
+            color: #f97e6c;
+        }
+        .p-content{
+            margin: 10px 0 30px;
+            font-size: 18px;
+            line-height: 22px;
+            color: #656565;
+        }
+        input[type=text], textarea{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+           
+            resize: vertical;
+        }
+        input[type=submit]{
+            background-color: #f97e6c;
+            color: #fff;
+            padding: 15px 60px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        input[type=submit]:hover{
+            background-color:#656565;
+        }
+        
+        .map{
+                    
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: 0 auto;
+        }
+       
+            
+        
+        </style>
+    <div class="container contact">
+        <h2>Bản Đồ Cửa Hàng</h2>
+    
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.9042744516187!2d105.81368901459645!3d21.036515885994156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab128b45bf23%3A0xd1d32b58169417cd!2zMjY2IMSQ4buZaSBD4bqlbiwgTGnhu4V1IEdpYWksIEJhIMSQw6xuaCwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1637568384633!5m2!1svi!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    
+        <h2>Liên Hệ Với Chung Tôi</h2>
+        <div class="wrapper row">
+            <div class="col-md-6 col-6 col-sm-12">
+                <h4>Thông Tin Liên Hệ</h4>
+                <p class="p-content">
+                    Bạn hãy điền nội dung tin nhắn vào form dưới đây và gửi cho chúng tôi. Chúng tôi sẽ trả lời bạn sau khi nhận được.
+                </p>
+            <form action="/index.html">
+            <div class="row">
+                <div class="col-6 col-md-6 col-sm-12">
+                    <label for="fname"></label>
+                    <input id= 'contact-name' type="text" id="fname" name="first name" placeholder="Họ và Tên">
+                    <span class="errorMessage" id = 'errorName3' >Vui lòng nhập trường này</span>
+                </div>
+                <div class="col-6 col-md-6 col-sm-12">
+                    <label for="pphone"></label>
+                    <input id = 'contact-phone' type="text" id="pphone" name="pphone" placeholder="Số điện thoại">
+                    <span  class="errorMessage" id="errorPhone" >Số điện thoại không hợp lệ</span>
+                </div>
+                <div class="col-6 col-md-6 col-sm-12">
+                    <label for="pemail"></label>
+                    <input id = 'contact-email' type="text" id="pemail" name="pemail" placeholder="Email">
+                    <span  class="errorMessage" id="errorEmail3" >Email không hợp lệ</span>
+                </div>
+                <div class="col-12 col-md-12 col-sm-12">
+                    <label for="subject"></label>
+                    <textarea id="subject" name="subject" placeholder="Nội dung" style="height:120px"></textarea>
+                    <span class="errorMessage" id="errorAnswer" >Bạn chưa nhập phản hồi</span>
+                </div>
+                <a onclick = 'LienHe()' href="#" class="btn btn-contact">
+                    Gửi ngay
+                </a>
+             
+            </div>
+            </form>
+            </div>
+            <div class="col-md-6 col-6 col-sm-12 ">
+                <h6>Cửa Hàng Đồng Hồ Claten</h6>
+                <ul class="contact-page">
+                    <li class="contact-item">
+                        <div class="contac-icon">
+                            <i class="bx bxs-map">
+                            
+                            </i>
+                        </div>
+                        <p>
+                            Tầng 6, Tòa nhà Ladeco, 266 Đội Cấn, Phường Liễu Giai, Quận Ba Đình,</br> TP Hà Nội
+                        </p>
+                    </li>
+                    <li class="contact-item">
+                        <div class="contac-icon">
+                            <i class="bx bxs-time-five">
+
+                            </i>
+                        </div>
+                        <p>
+                            Giờ làm việc: Từ 9:00 đến 22:00 các ngày trong tuần từ Thứ 2 đến Chủ nhật
+                        </p>
+                    </li>
+                    <li class="contact-item">
+                        <div class="contac-icon">
+                            <i class="bx bxs-phone">
+
+                            </i>
+                        </div>
+                        <a   href="/">19006750</a>
+                    </li>
+                    <li class="contact-item">
+                        <div class="contac-icon">
+                            <i class="bx bxs-envelope">
+                            
+                            </i>
+                        </div>
+                        <a href="/">support@sapo.vn</a>
+                    </li>
+                    <li class="contact-item">
+                        <div class="contac-icon">
+                            <i class="bx bxs-link">
+                            
+                            </i>
+                        </div>
+                        <a href="/" title="claten.net">Claten.net</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+   </div>
+   </section>
+
+   <section id="PageCheckout" class="PageCheckout pt-60">
+         
+    <div class="row">
+        <div class="col-12 col-md-12 col-sm-12">
+            <div class="container">
+            <form action="">
+            
+                <div class="row">
+                    <div class="col-6 col-md-6 col-sm-12">
+                        <h3>Địa chỉ</h3>
+                    <label><i class="fa fa-user"></i> Họ và tên </label>
+                    <input id="Payment-name" value="" type="text" placeholder="Vui lòng nhập Họ và tên">
+                    <span  class="errorMessage" id="errorName2" >Vui lòng nhập trường này</span>
+
+                    <label><i class="fa fa-envelope"></i> Email</label>
+                    <input id="Payment-email" value="" type="text" placeholder="Vui lòng nhập Email">
+                    <span class="errorMessage" id="errorEmail2" >Vui lòng nhập trường này</span>
+
+                    <label><i class="fa fa-institution"></i>Thành phố</label>
+                    <input id="Payment-city" value="" type="text" placeholder="Vui lòng nhập Tỉnh/Thành phố">
+                    <span class="errorMessage" id="errorCity" >Vui lòng nhập trường này</span>
+
+                    <label><i class="fa fa-institution"></i>Quận huyện</label>
+                    <input id="Payment-district" value="" type="text" placeholder="Vui lòng nhập Quận/Huyện">
+                    <span class="errorMessage" id="errorDistrict" >Vui lòng nhập trường này</span>
+
+                    <label><i class="fa fa-institution"></i>Phường xã</label>
+                    <input id="Payment-ward" value="" type="text" placeholder="Vui lòng nhập Phường/Xã">
+                    <span class="errorMessage" id="errorWard" >Vui lòng nhập trường này</span>
+
+                    <label><i class="fa fa-address-card-o"></i> Địa chỉ</label>
+                    <input id="Payment-address" value="" type="text" placeholder="Vui lòng nhập Địa chỉ">
+                    <span class="errorMessage" id="errorAddress" >Vui lòng nhập trường này</span>
+
+                        
+                    </div>
+    
+                    <div class="col-6 col-md-6 col-sm-12">
+                        <h3>Vận chuyển</h3>
+                        <div> Phương thức vận chuyển </div>
+                        <label style="border: 1px solid #ccc; ;background-color:white; display: block;padding:10px; ;margin-top: 10px;border-radius: 3px;">
+                            <input type="radio" checked >
+                            <p style="display: inline;" id="transport" >Giao hàng tận nơi</p>  
+                            <span class="transport" style="float:right ;margin-bottom:30px" id="">40.000</span>
+                        </label>    
+                    
+                        <h3  >Thanh toán</h3>
+                        <div>
+                            <div>
+                                <label style="border: 1px solid #ccc; ;background-color:white; display: block;padding:10px; ;margin-top: 10px;border-radius: 3px;">
+                                    <input type="radio" checked >
+                                Thanh toán khi giao hàng (COD)
+                                </label> 
+                            </div>
+                            <div>
+                                Bạn chỉ phải thanh toán khi nhận được hàng
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <a onclick="thanhtoan()" class="btn-checkoutpage" >
+                            ĐẶT HÀNG
+                     </a>
+                </div>           
+                
+                 
+            </form>
+        </div>
+    </div>
+    
+    </div>
+   </section>
+
+    <div class="footer">
+        <div class="footer-contact">
+            <div class="container">
+                <div class= "footer-contact-content row">
+                    <h3 class="col-6 col-md-6 col-sm-12">NHẬN THÔNG TIN KHUYẾN MÃI TỪ CHÚNG TÔI</h3>
+                    <div class="form col-6 col-md-6 col-sm-12">
+                        <input type="" placeholder="Nhập email của bạn tại đây"><a href="">Gửi</a></input>
+                       
+                    </div>
+                    
+                </div>
+
+            </div>
+         
+         </div>
+        <div class="container">
+           
+            <div class="wrapper row ">
+                <div class="footer-logo row col-5 col-md-6 col-sm-12">
+                    <a class="footer-img">
+                        <img src="./img/logo.png" alt="">
+                    </a> 
+
+                    <ul class="footer-des">
+                           <li class="footes-des-item">
+                               <div class="footer-des-icon">
+                                    <i class='bx bxs-map'></i>
+                               </div>
+                               <p>Tầng 6, Tòa nhà Ladeco, 266 Đội Cấn,<br> Phường Liễu Giai, Quận Ba Đình, TP Hà Nội</p>
+                           </li>
+                           <li class="footes-des-item">
+                                <div class="footer-des-icon">
+                                    <i class='bx bxs-time-five' ></i>
+                                </div>
+                               <p>Giờ làm việc: Từ 9:00 đến 22:00 các ngày <br>trong tuần từ Thứ 2 đến Chủ nhật</p>
+                           </li>
+                           <li class="footes-des-item">
+                            <div class="footer-des-icon">
+                                <i class='bx bxs-phone' ></i>
+                             </div>
+                               <p>Hotline<br>
+                                   <span class="phone-footer" >19006750</span>
+                               </p>
+                           </li>
+                    </ul>
+                </div>
+
+                <div class="footer-menu row col-7 col-md-6 col-sm-12">
+                     <div class="footer-menu-item col-4 col-md-6 col-sm-12">
+                         <h3>Về chúng tôi</h3>
+                         <ul>
+                            <li><a href="">Trang chủ</a></li>
+                            <li><a href="">Giới thiệu</a></li>
+                            <li><a href="">Sản phẩm</a></li>
+                            <li><a href="">Tin tức</a></li>
+                            <li><a href="">Liên hệ</a></li>
+                         </ul>
+
+                         <div class="footer-social">
+                            <li><a href=""><i class='bx bxl-youtube' ></i></a></li>
+                            <li><a href=""><i class='bx bxl-facebook' ></i></a></li>
+                            <li><a href=""><i class='bx bxl-instagram' ></i></a></li>
+                       </div>
+                     </div>
+
+                     <div class="footer-menu-item col-4 col-md-6 col-sm-12">
+                        <h3>Hỗ trợ khách hàng</h3>
+                        <ul>
+                           <li><a href="">Trang chủ</a></li>
+                           <li><a href="">Giới thiệu</a></li>
+                           <li><a href="">Sản phẩm</a></li>
+                           <li><a href="">Tin tức</a></li>
+                           <li><a href="">Liên hệ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-menu-item col-4 col-md-6 col-sm-12">
+                        <h3>Dịch vụ</h3>
+                        <ul>
+                           <li><a href="">Trang chủ</a></li>
+                           <li><a href="">Giới thiệu</a></li>
+                           <li><a href="">Sản phẩm</a></li>
+                           <li><a href="">Tin tức</a></li>
+                           <li><a href="">Liên hệ</a></li>
+                        </ul>
+                    </div>
+
+                    
+
+                </div>
+
+               
+            </div>
+        </div>
+    </div>
+  
+    <a href="#"class="to-top">
+        <i class='bx bx-arrow-to-top'></i>
+    </a>
+
+    <script src="./app.js"></script>
+    <script>
+        window.onload = function() {
+            createProduct();
+            changeProducts('nam');
+            LoadUser();
+            LoadBill();
+            LoaddetailBill();
+            
+        }
+    </script>
+</body>
+</html>
